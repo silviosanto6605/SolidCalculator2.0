@@ -1,28 +1,22 @@
 function Cubo(){
-    window.location.href = "Cubo.html"
+    window.location.href = "cubo.html"
 }
 
 
 function Parallel(){
-    window.location.href = "Parallel.html"
+    window.location.href = "parallelogramma.html"
 }
 
 
 function Piramide(){
-    window.location.href = "Piramide.html"
+    window.location.href = "piramide.html"
 }
 
 
 function Cilindro(){
-    window.location.href = "Cilindro.html"
+    window.location.href = "cilindro.html"
 }
-
-/* da rivedere il codice js. 
-
-    Eliminare parti superflue.
-    Ottimizzare il codice
-
-*/
 function Sfera(){
-    window.location.href = "Sfera.html"
+    window.location.href = "sfera.html";
+
 }
