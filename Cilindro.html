@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <head>
+        <title>Solid Calculator</title>
+        <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet">
+        <script src="js/index.js"></script> 
+    </head>
+    <body>
+        <div id= "logo_title"> 
+        <center>
+        <a href="index.html"><img src="img/logo.png"></a>
+        <h1><em>Solid Calculator</em></h1>
+        <p></p>
+        <h2><em>SCEGLI UN SOLIDO</em></h2>
+        </center>
+        </div>
+        <link rel="stylesheet" type="text/css"href="css/index.css">
+
+        
+        <div id="Menuscelta">
+        <center>
+            <button onclick="Cubo()" class="myButton">Cubo</button>
+            <button onclick="Parallel()" class="myButton">Parallelepipedo</button>
+            <button onclick="Piramide()" class="myButton">Piramide</button>
+            <button onclick="Cilindro()" class="myButton">Cilindro</button>
+            <button onclick="Sfera()" class="myButton">Sfera</button>
+            <p></p>
+        <img src="img/Cilindro.png">
+        </center>
+    </div>
+    <h1>Cilindro</h1>
+    <h2>Raggio*</h2>
+    <input type="number" id="raggio"><p></p>
+    <h2>Diametro</h2>
+    <input type="number" id="diametro"><p></p>
+    <h2>Area</h2>
+    <input type="number" id="area"><p></p>
+    <h2>Circonferenza</h2>
+    <input type="number" id="circonferenza"><p></p>
+    <h2>Altezza*</h2>
+    <input type="number" id="altezza"><p></p>
+    <h2>Volume</h2>
+    <input type="number" id="volume"><p></p>
+    <h2>Superficie Laterale</h2>
+    <input type="number" id="suplat"><p></p>
+    <h2>Superficie Totale</h2>
+    <input type="number" id="suptot"><p></p>
+    
+    <button onclick="Cilindro()">Calcola tutti i valori</button>
+    <em><h4>Nota: i valori contrassegnati dall' asterisco (*) devono essere inseriti dall' utente</h4></em>
+    <script>
+        function Cilindro(){
+        const pi = 3.1415926535;
+        var raggio = document.getElementById('raggio').value;
+        var diametro = (raggio*2);
+        document.getElementById('diametro').value = diametro; 
+        
+        var area = ((raggio*raggio)*pi);
+        document.getElementById('area').value = area;
+    
+       var circonferenza = (diametro*pi);
+       document.getElementById('circonferenza').value = circonferenza;
+
+        var altezza = document.getElementById('altezza').value;
+        var volume = (area*altezza);
+        document.getElementById('volume').value = volume;
+
+        var suplat = (circonferenza*altezza);
+        document.getElementById('suplat').value = suplat;
+
+        var suptot = (suplat+(area*2));
+        document.getElementById('suptot').value = suptot;    
+    
+    
+    }
+
+    
+     //da finire gli altri elementi.
+
+    </script>
+
+</body>
+</html>

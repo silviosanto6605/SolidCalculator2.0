@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet"> 
+        <title>SolidCalculator 1.0</title>
+        <script src="js/index.js"></script> 
+    </head>
+    <body>
+        <div id= "logo_title"> 
+        <center>
+            <a href="index.html"><img src="img/logo.png"></a>
+        <h1>Solid Calculator</h1>
+        </center>
+        </div>
+
+
+        <link rel="stylesheet" type="text/css"href="css/index.css">
+        
+        <div id="Menuscelta">
+        <center>
+        <button onclick="Cubo()"class="myButton">Cubo</button>
+        <button onclick="Parallel()"class="myButton">Parallelepipedo</button>
+        <button onclick="Piramide()"class="myButton">Piramide</button>
+        <button onclick="Cilindro()"class="myButton">Cilindro</button>
+        <button onclick="Sfera()" class="myButton">Sfera</button>
+        <p></p>
+        <br>	
+		<img src="img/Cubo.png">
+        </center>
+        <h1>Cubo</h1>
+         <h2>Lato</h2>
+        <input type="text" id="lato"> <button onclick="CalcolaCubo()">OK</button>
+        
+		<h2>Superficie laterale</h2> 
+		<p></p><input type="text" id="SupLatx"><p></p>
+        <p>
+		<h2>Superficie totale</h2>
+        <input type="text" id="SupTotx">
+		<h2>Volume</h2>
+        </p><input type="text" id="Volumex">
+
+
+    </div>
+    <p>
+    <p>
+    
+        <script type="text/javascript">
+            function CalcolaCubo(){
+                 var lato= document.getElementById('lato').value;
+                 var SupLat = (lato*4)
+                 var SupTot = (lato*6)
+                 var Volume = (lato*lato*lato)
+                
+                 document.getElementById('SupLatx').value = SupLat;
+                 document.getElementById('SupTotx').value = SupTot;
+                 document.getElementById('Volumex').value = Volume;
+
+            }
+            
+            
+            
+        </script>
+    </body>
+

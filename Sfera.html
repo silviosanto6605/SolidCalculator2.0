@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet">
+        <title>SolidCalculator</title>
+        <script src="js/index.js"></script> 
+    </head>
+    <body>
+        <div id= "logo_title"> 
+        <center>
+            <a href="index.html"><img src="img/logo.png"></a>
+            <h1><em>Solid Calculator</em></h1>
+            <p></p>
+            <h2><em>SCEGLI UN SOLIDO</em></h2>
+        </center>
+        </div>
+        <link rel="stylesheet" type="text/css"href="css/index.css">
+        <div id="Menuscelta">
+        <center>
+            <button onclick="Cubo()" class="myButton">Cubo</button>
+            <button onclick="Parallel()" class="myButton">Parallelepipedo</button>
+            <button onclick="Piramide()" class="myButton">Piramide</button>
+            <button onclick="Cilindro()" class="myButton">Cilindro</button>
+            <button onclick="Sfera()" class="myButton">Sfera</button>
+            <p></p>
+
+        
+        <img src="img/Sfera.png">
+    </center>
+        <h1>Sfera</h1>
+    <h2>Raggio*</h2>
+    <input type="number" id="raggio"><p></p>
+    <h2>Diametro</h2>
+    <input type="number" id="diametro"><p></p>
+    <h2>Volume</h2>
+    <input type="number" id="volume"><p></p>
+    <h2>Superficie Totale</h2>
+    <input type="number" id="suptot"><p></p>
+    <script type="text/javascript">
+    
+    function SferaCalc(){
+
+    var Raggio = document.getElementById('raggio').value;
+    var Diametro = (Raggio*2)
+    document.getElementById('diametro').value = Diametro
+
+    var Volume = (4/3 * Math.PI * Math.pow(Raggio,3))
+    document.getElementById('volume').value = Volume
+    
+    var SuperficieTotale = (4*Math.PI * Math.pow(Raggio,2));
+    document.getElementById('suptot').value = SuperficieTotale;
+    }
+
+    </script>
+
+    <button onclick="SferaCalc()">Calcola tutti i valori</button>
+    </div>
+
+    <script>
+    </script>
+
+    </body>

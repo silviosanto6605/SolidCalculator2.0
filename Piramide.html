@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet"> 
+        <title>Solid Calculator</title>
+        <script src="js/index.js"></script> 
+    </head>
+    <body>
+
+        <div id= "logo_title"> 
+        <center>
+            <a href="index.html"><img src="img/logo.png"></a>
+            <h1><em>Solid Calculator</em></h1>
+            <p></p>
+            <h2><em>SCEGLI UN SOLIDO</em></h2>
+        </center>
+        </div>
+        <link rel="stylesheet" type="text/css"href="css/index.css">
+
+        
+        <div id="Menuscelta">
+        <center>
+        <button onclick="Cubo()" class="myButton">Cubo</button>
+        <button onclick="Parallel()" class="myButton">Parallelepipedo</button>
+        <button onclick="Piramide()" class="myButton">Piramide</button>
+        <button onclick="Cilindro()" class="myButton">Cilindro</button><p></p>
+        <button onclick="Sfera()" class="myButton">Sfera</button>
+        <p></p>
+        <img src="img/Piramide.png">
+        </center>
+    </div>
+    <h1>Piramide</h1>
+    <h2>Lato1*</h2>
+    <input type="number" id="lato1">
+    <h2>Lato2*</h2>
+    <input type="number" id="lato2"> 
+    <p></p>
+    <h2>Perimetro</h2>
+    <input type="number" id="perimetro">
+    <h2>Altezza*</h2>
+    <input type="number" id="Altezza">
+    <h2>Apotema*</h2>
+    <input type="number" id="Apo">
+    <h2>AreaBase</h2>
+    <input type="number" id="AreaBase">
+    <h2>Superficie Laterale</h2>
+    <input type="number" id="suplat">
+    <h2>Superficie Totale</h2>
+    <input type="number" id="suptot">
+    <h2>Volume</h2>
+    <input type="number" id="volume"><p></p>
+    <button onclick="Pira()">Calcola tutti i valori</button>
+    
+
+
+    <script type="text/javascript">
+        function Pira(){
+
+        var lato1 = document.getElementById('lato1').value;
+        var lato2 = document.getElementById('lato2').value;
+        var perimetro = ((lato1*2)+(lato2*2))
+        document.getElementById('perimetro').value = perimetro; //perimetro
+       
+        var area = (lato1*lato2)
+        document.getElementById('AreaBase').value = area;
+
+        var altezza = document.getElementById('Altezza').value;
+        var apotema = document.getElementById('Apo').value;
+        var suplat = ((perimetro* apotema)/2)
+        document.getElementById('suplat').value = suplat;
+
+        var suptot = (suplat+area)
+        document.getElementById('suptot').value = suptot;
+
+        var volume = ((area*altezza)/3)
+        document.getElementById('volume').value = volume;
+
+        } 
+    </script>
+
+    </body>
+</html>
