@@ -1,3 +1,4 @@
 /node_modules
 out/
 solidcalculator_2.0_amd64.snap
+dist/*

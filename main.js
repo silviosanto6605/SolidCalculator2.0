@@ -3,16 +3,18 @@ const {
     BrowserWindow
 } = require('electron')
 
+
+
 function createWindow() {
     const win = new BrowserWindow({
         width: 800,
         height: 600,
-        webPreferences:{
+        webPreferences: {
 
             devTools: false
 
         }
-        
+
     })
 
     win.loadFile("index.html")
@@ -20,5 +22,5 @@ function createWindow() {
 }
 app.whenReady().then(() => {
     createWindow()
-    
+
 })
