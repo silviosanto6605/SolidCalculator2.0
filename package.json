@@ -4,34 +4,41 @@
   "description": "A Simple Solid Calculator for Linux",
   "main": "main.js",
   "author": {
-    "name":"Silvio Santoriello",
-    "email":"dev.silviosanto6605@gmail.com"
+    "name": "Silvio Santoriello",
+    "email": "dev.silviosanto6605@gmail.com"
   },
-  "maintainers": ["Silvio Santoriello"],
+  "maintainers": [
+    "Silvio Santoriello"
+  ],
   "license": "GPL-3.0",
   "homepage": "https://github.com/silviosanto6605/SolidCalculator2.0",
-  
-  
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "build": "electron-builder --linux deb snap"
+    "build-linux": "electron-builder --linux deb snap",
+    "build-win": "electron-builder --win"
   },
   "devDependencies": {
     "electron": "^13.1.2",
     "electron-builder": "^22.11.7"
   },
-
   "build": {
     "appId": "solidcalculator",
-    "snap":{
-
-      "title":"SolidCalculator",
-      "confinement":"strict",
-      "summary":"A solid calculator for Linux.",
+    "win": {
+      "target": [
+        "msi",
+        "nsis"
+      ],
+      "icon": "build/icons/icon.ico"
+    },
+    "snap": {
+      "title": "SolidCalculator",
+      "confinement": "strict",
+      "summary": "A solid calculator for Linux.",
       "grade": "stable"
-
-
     }
+  },
+  "dependencies": {
+    "latest-version": "^5.1.0"
   }
 }
